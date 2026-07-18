@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect With Us | Alteon Exports Trade Desk</title>
+  <meta name="description" content="Get in touch with Alteon Exports Ltd. Submit a trade desk inquiry, request cargo quotations, or establish a procurement partnership.">
+  
+  <!-- Open Graph / Social Media Cards -->
+  <meta property="og:title" content="Connect With Us | Alteon Exports Trade Desk">
+  <meta property="og:description" content="Reach our offices in Abuja. Submit a query via our secure, accessible B2B trade form.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.alteonexports.com/contact.html">
+  <meta property="og:image" content="assets/logo.png">
+
+  <!-- Style Sheets & Fonts -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Accessible Skip Navigation Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation Bar -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo-container" aria-label="Alteon Exports Home">
+        <img src="assets/logo.png" alt="Alteon Exports Ltd logo (Globe and Serif Typography)">
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="contact.html" class="nav-cta">
+        <div class="arrow-circle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+        Book Now
+      </a>
+
+      <button class="hamburger" aria-label="Toggle mobile menu" aria-controls="mobile-nav" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-out Navigation Panel -->
+  <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+  <nav id="mobile-nav" class="mobile-nav-panel" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary mobile-nav-cta">Get in Touch</a>
+  </nav>
+
+  <!-- Main Content Body -->
+  <main id="main-content">
+    
+    <!-- Hero / Banner Section -->
+    <section class="hero hero-centered" style="min-height: 60vh; padding-top: 190px; padding-bottom: 120px; background: radial-gradient(circle at 20% 20%, #1c1524 0%, var(--bg-navy-dark) 80%);">
+      <div class="container">
+        <div class="hero-content" style="max-width: 700px; margin: 0 auto; text-align: center; align-items: center;">
+          <span class="hero-subtitle">secure communications</span>
+          <h1 id="contact-title" class="hero-title">connect with our <span>trade desk</span></h1>
+          <p class="hero-description" style="max-width: 600px;">
+            Initiate pricing requests, check shipment schedules, or establish a corporate global sourcing agreement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="section-padding" aria-labelledby="contact-form-heading">
+      <div class="container contact-grid">
+        
+        <!-- Contact Form Container -->
+        <div class="contact-form-container">
+          <h2 id="contact-form-heading" class="division-title" style="margin-bottom: 2rem;">Inquiry Form</h2>
+          
+          <!-- Live Validation Status Box (Screen Reader Accessible via aria-live) -->
+          <div id="form-status-alert" class="form-status-alert" tabindex="-1" aria-live="assertive"></div>
+          
+          <!-- Contact Form (Action links to a simulated handler by default) -->
+          <form class="contact-form" action="" method="POST" novalidate>
+            <!-- Spam Protection HoneyPot Field (Hidden from human users, visible to bots) -->
+            <div class="hp-field">
+              <label for="form_honey_pot">Do not fill this input</label>
+              <input type="text" name="_honey_pot" id="form_honey_pot" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-row-split">
+              <div class="form-group">
+                <label for="contact_name">Full Name *</label>
+                <input type="text" id="contact_name" name="name" required aria-required="true">
+                <span id="contact_name-error" class="form-error" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="contact_company">Company Name</label>
+                <input type="text" id="contact_company" name="company">
+              </div>
+            </div>
+
+            <div class="form-row-split">
+              <div class="form-group">
+                <label for="contact_email">Corporate Email *</label>
+                <input type="email" id="contact_email" name="email" required aria-required="true">
+                <span id="contact_email-error" class="form-error" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="contact_division">Division of Interest *</label>
+                <select id="contact_division" name="division" required aria-required="true">
+                  <option value="" disabled selected>Select a division...</option>
+                  <option value="export_agri">Export Division (Agricultural Commodities)</option>
+                  <option value="export_minerals">Export Division (Solid Minerals)</option>
+                  <option value="sourcing_procurement">Global Sourcing &amp; Procurement Division</option>
+                  <option value="other">General Inquiries</option>
+                </select>
+                <span id="contact_division-error" class="form-error" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact_message">Inquiry Details *</label>
+              <textarea id="contact_message" name="message" required aria-required="true" placeholder="Please describe commodity specs, volumes, or sourcing requirements..."></textarea>
+              <span id="contact_message-error" class="form-error" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Submit Inquiry</button>
+          </form>
+        </div>
+
+        <!-- Contact Information Info Card -->
+        <div class="contact-card-info" aria-label="Trade Desk Contact Information">
+          <h2 class="division-title" style="margin-bottom: 1.5rem; font-size: 1.5rem;">Corporate Office</h2>
+          <p>For direct transactional inquiries or urgent logistics dispatch, contact our Abuja operations desk directly.</p>
+          
+          <div class="contact-info-list">
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">📍</div>
+              <div class="info-content">
+                <h3>office address</h3>
+                <p>Abuja, Nigeria</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">✉️</div>
+              <div class="info-content">
+                <h3>trade email</h3>
+                <a href="mailto:alteonexports@gmail.com">alteonexports@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">📞</div>
+              <div class="info-content">
+                <h3>phone desk</h3>
+                <a href="tel:+2347079764147">+2347079764147</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">⏰</div>
+              <div class="info-content">
+                <h3>operating hours</h3>
+                <p>Monday – Friday<br>08:30 – 17:00 (WAT / GMT+1)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Alteon Exports Ltd Logo">
+        <p class="footer-desc">Professional agricultural commodity exports, minerals trading, and strategic sourcing partnerships for international corporations.</p>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">quick links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">discover</a></li>
+          <li><a href="about.html">about story</a></li>
+          <li><a href="services.html">trade services</a></li>
+          <li><a href="contact.html">connect with us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">contact desk</h3>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <span>address:</span>
+            <span>Abuja, Nigeria</span>
+          </li>
+          <li class="footer-contact-item">
+            <span>email:</span>
+            <a href="mailto:alteonexports@gmail.com">alteonexports@gmail.com</a>
+          </li>
+          <li class="footer-contact-item">
+            <span>phone:</span>
+            <a href="tel:+2347079764147">+2347079764147</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Alteon Exports Ltd. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a href="#">privacy policy</a>
+        <a href="#">terms of trade</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
