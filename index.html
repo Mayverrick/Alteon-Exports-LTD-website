@@ -94,39 +94,29 @@
 
     <!-- Hero Section -->
     <section class="hero-new" aria-labelledby="hero-title">
-      <div class="hero-container"
-        style="display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 1200px; margin: 0 auto; padding-top: 150px; position: relative; z-index: 2;">
+      <div class="hero-main-container">
 
-        <h1 id="hero-title" class="hero-title"
-          style="font-family: var(--font-heading); font-size: 6rem; line-height: 1; margin-bottom: 2rem; text-transform: uppercase;">
-          <span style="color: #FFFFFF; text-shadow: 2px 2px 0 #555;">IMPORT SMARTER</span><br>
-          <span style="color: var(--orange-primary); text-shadow: 2px 2px 0 #8a360e;">EXPORT FASTER</span>
+        <h1 id="hero-title" class="hero-main-title">
+          <span class="hero-word-white">IMPORT SMARTER</span><br>
+          <span class="hero-word-orange">EXPORT FASTER</span>
         </h1>
 
-        <div
-          style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%; text-align: left; margin-top: 2rem;">
-          <div style="max-width: 500px; display: flex; flex-direction: column; gap: 1.5rem; align-items: flex-start;">
-            <!-- Left floating container graphic (moved in-flow, above the text) -->
-            <div class="import-image-wrapper"
-              style="position: relative; width: 320px; height: 210px; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transform: rotate(-4deg); margin-left: 10px; margin-bottom: 0.5rem; z-index: 2;">
-              <img src="assets/import_goods.png" alt="Import goods with Alteon Exports branding"
-                style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
-              <div class="import-overlay"
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; font-family: var(--font-heading); font-size: 3rem; color: #fff;">
-                IMPORT
-              </div>
+        <div class="hero-bottom-row">
+          <!-- Left column: image + text -->
+          <div class="hero-left-col">
+            <div class="import-image-wrapper hero-img-import">
+              <img src="assets/import_goods.png" alt="Import goods with Alteon Exports branding">
+              <div class="import-overlay">IMPORT</div>
             </div>
 
-            <div>
-              <p style="font-size: 1.1rem; line-height: 1.6; color: #ccc; margin-bottom: 2rem;">
+            <div class="hero-text-block">
+              <p class="hero-tagline">
                 Trusted Import And Export Solutions For Businesses Worldwide. We Handle Air Freight, Ocean Logistics,
                 Customs Support, And Fast Delivery Services With Complete Reliability And Efficiency.
               </p>
-              <div style="display: flex; align-items: center; gap: 1.5rem;">
-                <a href="services.html"
-                  style="display: flex; align-items: center; gap: 0.5rem; color: #fff; font-weight: 600; text-decoration: none;">
-                  <div
-                    style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--orange-primary); display: flex; align-items: center; justify-content: center; color: #000;">
+              <div class="hero-cta-row">
+                <a href="services.html" class="hero-get-started">
+                  <div class="hero-arrow-circle">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round">
                       <polyline points="9 18 15 12 9 6"></polyline>
@@ -134,33 +124,22 @@
                   </div>
                   Get Started
                 </a>
-                <div style="display: flex; align-items: center; gap: 0.5rem; color: #ccc; font-size: 0.9rem;">
-                  <!-- Placeholder for avatars -->
-                  <div style="display: flex;">
-                    <div
-                      style="width: 30px; height: 30px; border-radius: 50%; background-color: #555; border: 2px solid #000; margin-left: -10px; z-index: 3;">
-                    </div>
-                    <div
-                      style="width: 30px; height: 30px; border-radius: 50%; background-color: #777; border: 2px solid #000; margin-left: -10px; z-index: 2;">
-                    </div>
-                    <div
-                      style="width: 30px; height: 30px; border-radius: 50%; background-color: #999; border: 2px solid #000; margin-left: -10px; z-index: 1;">
-                    </div>
+                <div class="hero-avatars">
+                  <div class="hero-avatar-stack">
+                    <div class="avatar av1"></div>
+                    <div class="avatar av2"></div>
+                    <div class="avatar av3"></div>
                   </div>
-                  Helping Brands Ship Worldwide
+                  <span>Helping Brands Ship Worldwide</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="export-image-wrapper"
-            style="position: relative; width: 400px; height: 250px; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-            <img src="assets/export_container.png" alt="Export container with Alteon Exports branding"
-              style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
-            <div class="export-overlay"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; font-family: var(--font-heading); font-size: 4rem; color: #fff;">
-              EXPORT
-            </div>
+          <!-- Right column: export image -->
+          <div class="export-image-wrapper hero-img-export">
+            <img src="assets/export_container.png" alt="Export container with Alteon Exports branding">
+            <div class="export-overlay">EXPORT</div>
           </div>
         </div>
 
@@ -388,8 +367,7 @@
     <div class="container footer-bottom">
       <p>&copy; 2026 Alteon Exports Ltd. All rights reserved.</p>
       <div class="footer-legal-links">
-        <a href="#">privacy policy</a>
-        <a href="#">terms of trade</a>
+        <a href="privacy-policy.html">privacy policy</a>
       </div>
     </div>
   </footer>
