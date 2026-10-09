@@ -1115,14 +1115,15 @@ footer {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 300px;
+  width: 50%;
+  min-width: 240px;
   height: 100vh;
   background-color: var(--bg-overlay);
   backdrop-filter: blur(15px);
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  padding: 7rem 2.5rem 3rem 2.5rem;
+  padding: 6rem 1.5rem 2.5rem 1.5rem;
   border-left: 1px solid var(--border-divider);
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -2715,9 +2716,10 @@ footer {
     height: 38px;
   }
 
-  /* Mobile nav panel full-width on tiny screens */
+  /* Mobile nav panel half-width on mobile screens */
   .mobile-nav-panel {
-    width: 100%;
+    width: 50%;
+    min-width: 220px;
   }
 
   /* Partner logos tighter */
