@@ -1,0 +1,34 @@
+# ==============================================================================
+# ALTEON EXPORTS LTD - ROBOTS.TXT
+# Defense Hardening & Search Engine Guidance
+# ==============================================================================
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /about.html
+Allow: /services.html
+Allow: /contact.html
+Allow: /privacy-policy.html
+Allow: /.well-known/security.txt
+Allow: /security.txt
+Allow: /sitemap.xml
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+# Disallow access to hidden system directories and sensitive extensions
+Disallow: /.*
+Disallow: /*.bak$
+Disallow: /*.conf$
+Disallow: /*.env$
+Disallow: /*.git$
+Disallow: /*.log$
+Disallow: /*.sql$
+Disallow: /*.yaml$
+Disallow: /*.yml$
+
+# RFC 9116 Vulnerability Disclosure Endpoint
+# https://www.alteonexports.com/.well-known/security.txt
+
+Sitemap: https://www.alteonexports.com/sitemap.xml

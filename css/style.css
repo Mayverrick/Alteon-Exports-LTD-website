@@ -2776,3 +2776,174 @@ footer {
     border-right: none !important;
   }
 }
+
+/* ==========================================================================
+   PRIVACY POLICY PAGE STYLES (Modularized for CSP Hardening)
+   ========================================================================== */
+.privacy-hero {
+  padding-top: 160px;
+  padding-bottom: 4rem;
+  background: radial-gradient(circle at 70% 10%, #1a0d05 0%, var(--bg-primary) 65%);
+  border-bottom: 1px solid var(--border-divider);
+}
+
+.privacy-hero .section-label-new {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.privacy-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.privacy-hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 540px;
+}
+
+.privacy-content {
+  padding: 5rem 0 6rem;
+}
+
+.privacy-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Sticky table of contents sidebar */
+.privacy-toc {
+  position: sticky;
+  top: 110px;
+}
+
+.privacy-toc h3 {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.privacy-toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.privacy-toc-list a {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: 0.35rem 0.75rem;
+  border-left: 2px solid var(--border-divider);
+  display: block;
+  transition: var(--transition-fast);
+}
+
+.privacy-toc-list a:hover {
+  color: var(--orange-primary);
+  border-left-color: var(--orange-primary);
+}
+
+/* Policy body */
+.privacy-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.policy-block {
+  border-bottom: 1px solid var(--border-divider);
+  padding-bottom: 3rem;
+}
+
+.policy-block:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.policy-block-num {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--orange-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.policy-block-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.policy-block p {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.policy-block p:last-child {
+  margin-bottom: 0;
+}
+
+.policy-block ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 1rem 0;
+  padding-left: 0.5rem;
+}
+
+.policy-block ul li {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.policy-block ul li::before {
+  content: '→';
+  color: var(--orange-primary);
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+
+.policy-contact-card {
+  background-color: var(--bg-raised);
+  border: 1px solid var(--border-divider);
+  border-radius: 8px;
+  padding: 2rem 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.policy-contact-card p {
+  margin-bottom: 0.5rem !important;
+}
+
+.policy-contact-card a {
+  color: var(--orange-primary);
+}
+
+.policy-contact-card a:hover {
+  text-decoration: underline;
+}
+

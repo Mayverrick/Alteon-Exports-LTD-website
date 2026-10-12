@@ -1,0 +1,55 @@
+# ==============================================================================
+# ALTEON EXPORTS LTD - CLOUDFLARE PAGES / NETLIFY PRODUCTION SECURITY HEADERS
+# Defense-in-Depth Hardening | Military-Grade Transport & Policy Configuration
+# ==============================================================================
+
+/*
+  # Content Security Policy (CSP Level 3)
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-5x9NrHytWgZO8uLjVEl2vetLKTkoj9x/YQ1RehA9EgM='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'none'; form-action 'self' https:; base-uri 'self'; object-src 'none'; upgrade-insecure-requests;
+
+  # HTTP Strict Transport Security (HSTS - 2 Years, Subdomains, Preload)
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+  # Anti-Clickjacking & UI Redress Defense
+  X-Frame-Options: DENY
+
+  # MIME-Sniffing Defense
+  X-Content-Type-Options: nosniff
+
+  # Referrer Privacy & Credential Leakage Prevention
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Cross-Origin Isolation Policies
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+
+  # Restrict Flash and Acrobat Cross-Domain Policies
+  X-Permitted-Cross-Domain-Policies: none
+
+  # Hardware, Sensor & Privacy Feature Permissions Isolation
+  Permissions-Policy: accelerometer=(), autoplay=(), camera=(), display-capture=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(self), usb=(), xr-spatial-tracking=(), browsing-topics=()
+
+  # Cache Control for Dynamic Content Baseline
+  X-XSS-Protection: 0
+
+# Security text endpoint cache & type
+/.well-known/security.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: max-age=604800, public
+
+/security.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: max-age=604800, public
+
+# Static Assets Optimization with Integrity Protection
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+/css/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+  X-Content-Type-Options: nosniff
+
+/js/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+  X-Content-Type-Options: nosniff

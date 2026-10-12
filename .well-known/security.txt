@@ -1,0 +1,11 @@
+# ==============================================================================
+# ALTEON EXPORTS LTD - RFC 9116 SECURITY VULNERABILITY DISCLOSURE
+# ==============================================================================
+Contact: mailto:security@alteonexports.com
+Contact: mailto:alteonexports@gmail.com
+Expires: 2027-10-12T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://www.alteonexports.com/.well-known/security.txt
+Policy: https://www.alteonexports.com/SECURITY.md
+Acknowledgments: https://www.alteonexports.com/about.html
+Hiring: https://www.alteonexports.com/contact.html

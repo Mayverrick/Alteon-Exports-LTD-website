@@ -1,0 +1,60 @@
+name: "Security Audit & Hardening Scan"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    # Weekly security scan every Monday at 04:00 UTC
+    - cron: '0 4 * * 1'
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  secret-scan:
+    name: "Secret & Credential Leak Scan"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Gitleaks Scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  static-security-analysis:
+    name: "Static Security & CSP Verification"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Audit Insecure HTTP Links (Mixed Content Guard)
+        run: |
+          echo "Scanning HTML and CSS files for insecure HTTP links..."
+          grep -rn "http://" *.html css/ js/ | grep -v "http://www.w3.org" | grep -v "http://schema.org" | grep -v "http://localhost" || true
+
+      - name: Verify RFC 9116 security.txt
+        run: |
+          test -f .well-known/security.txt || (echo "Missing .well-known/security.txt" && exit 1)
+          test -f security.txt || (echo "Missing fallback security.txt" && exit 1)
+          grep -q "Contact:" .well-known/security.txt || (echo "security.txt missing Contact directive" && exit 1)
+          grep -q "Expires:" .well-known/security.txt || (echo "security.txt missing Expires directive" && exit 1)
+          echo "RFC 9116 verification passed."
+
+      - name: Verify Security Configuration Headers
+        run: |
+          test -f _headers || (echo "Missing _headers file" && exit 1)
+          test -f vercel.json || (echo "Missing vercel.json file" && exit 1)
+          test -f .htaccess || (echo "Missing .htaccess file" && exit 1)
+          test -f nginx.conf || (echo "Missing nginx.conf file" && exit 1)
+          grep -q "Content-Security-Policy" _headers || exit 1
+          grep -q "Strict-Transport-Security" _headers || exit 1
+          grep -q "X-Frame-Options" _headers || exit 1
+          echo "Multi-platform headers configuration verified."

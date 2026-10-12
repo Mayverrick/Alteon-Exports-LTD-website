@@ -13,6 +13,15 @@
   <meta property="og:url" content="https://www.alteonexports.com/contact.html">
   <meta property="og:image" content="assets/logo.png">
 
+  <!-- Canonical & Security Baseline -->
+  <link rel="canonical" href="https://www.alteonexports.com/contact.html">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'none'; form-action 'self' https:; base-uri 'self'; object-src 'none'; upgrade-insecure-requests;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy"
+    content="accelerometer=(), autoplay=(), camera=(), display-capture=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(self), usb=(), xr-spatial-tracking=(), browsing-topics=()">
+
   <!-- Style Sheets & Fonts -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -98,27 +107,27 @@
           <!-- Contact Form (Action links to a simulated handler by default) -->
           <form class="contact-form" action="" method="POST" novalidate>
             <!-- Spam Protection HoneyPot Field (Hidden from human users, visible to bots) -->
-            <div class="hp-field">
+            <div class="hp-field" aria-hidden="true">
               <label for="form_honey_pot">Do not fill this input</label>
-              <input type="text" name="_honey_pot" id="form_honey_pot" tabindex="-1" autocomplete="off">
+              <input type="text" name="_honey_pot" id="form_honey_pot" tabindex="-1" autocomplete="new-password">
             </div>
 
             <div class="form-row-split">
               <div class="form-group">
                 <label for="contact_name">Full Name *</label>
-                <input type="text" id="contact_name" name="name" required aria-required="true">
+                <input type="text" id="contact_name" name="name" maxlength="100" required aria-required="true" autocomplete="name">
                 <span id="contact_name-error" class="form-error" aria-live="polite"></span>
               </div>
               <div class="form-group">
                 <label for="contact_company">Company Name</label>
-                <input type="text" id="contact_company" name="company">
+                <input type="text" id="contact_company" name="company" maxlength="100" autocomplete="organization">
               </div>
             </div>
 
             <div class="form-row-split">
               <div class="form-group">
                 <label for="contact_email">Corporate Email *</label>
-                <input type="email" id="contact_email" name="email" required aria-required="true">
+                <input type="email" id="contact_email" name="email" maxlength="120" required aria-required="true" autocomplete="email">
                 <span id="contact_email-error" class="form-error" aria-live="polite"></span>
               </div>
               <div class="form-group">
@@ -136,7 +145,7 @@
 
             <div class="form-group">
               <label for="contact_message">Inquiry Details *</label>
-              <textarea id="contact_message" name="message" required aria-required="true" placeholder="Please describe commodity specs, volumes, or sourcing requirements..."></textarea>
+              <textarea id="contact_message" name="message" maxlength="3000" required aria-required="true" placeholder="Please describe commodity specs, volumes, or sourcing requirements..."></textarea>
               <span id="contact_message-error" class="form-error" aria-live="polite"></span>
             </div>
 
@@ -230,6 +239,7 @@
       <p>&copy; 2026 Alteon Exports Ltd. All rights reserved.</p>
       <div class="footer-legal-links">
         <a href="privacy-policy.html">privacy policy</a>
+        <a href="SECURITY.md">security policy</a>
       </div>
     </div>
   </footer>
